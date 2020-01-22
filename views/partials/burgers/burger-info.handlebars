@@ -1,0 +1,11 @@
+
+<li >
+    <div class="is-pulled-left">{{burger_name}}</div>
+    <div class="is-pulled-right">
+        {{#unless devoured}}
+            <button class="devourit" data-id="{{id}}" data-devourit="{{devourit}}">
+                devour it!
+            </button>
+        {{/unless}}
+    </div>
+</li>

@@ -1,0 +1,12 @@
+<div class="column is-one-quarter">
+    <div class="container">
+        <h3 class="subtitle devoured-burgers">Devoured Burgers!</h3>
+        <ol class="list">
+            {{#each burgers}}
+                {{#if devoured}}
+                    {{> burgers/burger-info devourit=false}}
+                {{/if}}
+            {{/each}}
+        </ol>
+    </div>
+</div>

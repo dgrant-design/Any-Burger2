@@ -1,0 +1,40 @@
+<section class="hero is-medium is-primary is-bold">
+    <div class="hero-body">
+        <div class="container">
+            <h1 class="title" style="color: black;">Any Burger!</h1>
+        </div>
+    </div>
+</section>
+<section class="section has-background-light">
+    <div class="container">
+        <div class="columns is-mobile is-3">
+            <div class="column is-one-quarter">
+                <ol>
+                    {{#each burgers}}
+                    {{#unless devoured}}
+                    {{> burgers/burger-info devourit=true}}
+                    {{/unless}}
+                    {{/each}}
+                </ol>
+            </div>
+            <div class="column">
+                <form class="create-form">
+                    <div class="field">
+                        <label class="label">Burger Name</label>
+                        <div class="control has-icons-right">
+                            <input class="input s-primary" name="burger_name" type="text"
+                                placeholder="Enter any Burger you want to eat">
+                            <span class="icon is-small is-right warning" style="display:none">
+                                <i class="fas fa-exclamation-triangle"></i>
+                            </span>
+                        </div>
+                        <p class="help is-danger">Place the Burger here</p>
+                    </div>
+                    <div class="control">
+                        <button class="button is-primary">Submit</button>
+                    </div>
+                </form>
+            </div>
+            {{> burgers/devoured-burgers}}
+        </div>
+    </div>

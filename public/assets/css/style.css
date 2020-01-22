@@ -1,0 +1,12 @@
+.hero.is-primary.is-bold {
+    background: url("../img/istockphoto-937800718-1024x1024.jpg") no-repeat fixed;
+    background-size: cover;
+    opacity: 0.65;
+  }
+  .is-danger, warning{
+    display: none;
+  }
+  
+  ol.list {
+    padding-left: 20px;
+  }
